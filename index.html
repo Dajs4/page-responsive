@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Delicioso - Inicio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="_css/main.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Encabezado y Navegación -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-amber-600">Restaurante Delicioso</a>
+            <!-- Navegación para móvil -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Navegación para escritorio -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-amber-600 font-medium">Inicio</a>
+                <a href="_pages/menu.html" class="text-gray-600 hover:text-amber-600 transition-colors duration-300">Menú</a>
+                <a href="_pages/contact.html" class="text-gray-600 hover:text-amber-600 transition-colors duration-300">Contacto</a>
+            </div>
+        </nav>
+        <!-- Menú móvil expandible -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 py-3 shadow-lg">
+            <a href="index.html" class="block py-2 text-amber-600 font-medium">Inicio</a>
+            <a href="_pages/menu.html" class="block py-2 text-gray-600 hover:text-amber-600">Menú</a>
+            <a href="_pages/contact.html" class="block py-2 text-gray-600 hover:text-amber-600">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal con margen superior para compensar el encabezado fijo -->
+    <main class="container mx-auto px-4 pt-24 pb-12">
+        <!-- Hero Section -->
+        <section class="relative py-16 mb-12">
+            <div class="absolute inset-0 bg-amber-500 opacity-10 rounded-lg"></div>
+            <div class="relative z-10 text-center px-4 py-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Bienvenido a Restaurante Delicioso</h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Experimenta una combinación única de sabores en un ambiente acogedor</p>
+                <a href="_pages/menu.html" class="bg-amber-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-amber-700 transition-colors duration-300">Ver Menú</a>
+            </div>
+        </section>
+
+        <!-- Características o Especialidades -->
+        <section class="py-12">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Nuestras Especialidades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Especialidad 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <!-- Aquí iría una imagen -->
+                        <img src="./_img/especialidades-del-chef.jpg" alt="Especialidad 1" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Especialidad del Chef</h3>
+                        <p class="text-gray-600">Nuestro plato insignia preparado con los ingredientes más frescos del mercado.</p>
+                    </div>
+                </div>
+                <!-- Especialidad 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <!-- Aquí iría una imagen -->
+                        <img src="./_img/que-es-menu-degustacion-post-con-ejemplos.jpg" alt="Especialidad 2" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Menú Degustación</h3>
+                        <p class="text-gray-600">Prueba una selección de nuestros mejores platos en una experiencia única.</p>
+                    </div>
+                </div>
+                <!-- Especialidad 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <!-- Aquí iría una imagen -->
+                        <img src="./_img/postres_Artesanales.jfif" alt="Especialidad 3" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Postres Artesanales</h3>
+                        <p class="text-gray-600">El dulce final perfecto elaborado por nuestros maestros pasteleros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonio o CTA -->
+        <section class="py-12 bg-gray-100 rounded-lg my-12">
+            <div class="text-center px-4 py-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Lo que dicen nuestros clientes</h2>
+                <p class="text-xl italic text-gray-600 mb-8 max-w-3xl mx-auto">"La mejor experiencia gastronómica que he tenido. El ambiente, el servicio y la comida superaron todas mis expectativas."</p>
+                <p class="text-amber-600 font-medium">- Ana García, Cliente Habitual</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Restaurante Delicioso</h3>
+                    <p class="text-gray-300">Un lugar donde cada comida se convierte en una experiencia inolvidable.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Horario</h3>
+                    <p class="text-gray-300">Lunes a Viernes: 12:00 - 23:00</p>
+                    <p class="text-gray-300">Sábados y Domingos: 13:00 - 00:00</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contáctanos</h3>
+                    <p class="text-gray-300">Calle Principal 123, Ciudad</p>
+                    <p class="text-gray-300">Teléfono: (123) 456-7890</p>
+                    <p class="text-gray-300">Email: info@restaurantedelicioso.com</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2025 Restaurante Delicioso. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para el menú móvil -->
+    <script src="./_js/menuMovil.js">
+    </script>
+</body>
+</html>

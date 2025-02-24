@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Delicioso - Menú</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Encabezado y Navegación -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-amber-600">Restaurante Delicioso</a>
+            <!-- Navegación para móvil -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Navegación para escritorio -->
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-gray-600 hover:text-amber-600 transition-colors duration-300">Inicio</a>
+                <a href="menu.html" class="text-amber-600 font-medium">Menú</a>
+                <a href="contact.html" class="text-gray-600 hover:text-amber-600 transition-colors duration-300">Contacto</a>
+            </div>
+        </nav>
+        <!-- Menú móvil expandible -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 py-3 shadow-lg">
+            <a href="../index.html" class="block py-2 text-gray-600 hover:text-amber-600">Inicio</a>
+            <a href="menu.html" class="block py-2 text-amber-600 font-medium">Menú</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-amber-600">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal con margen superior para compensar el encabezado fijo -->
+    <main class="container mx-auto px-4 pt-24 pb-12">
+        <!-- Cabecera de la página de menú -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Nuestro Menú</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Descubre nuestra selección de platos preparados con ingredientes frescos y técnicas culinarias tradicionales e innovadoras.</p>
+        </section>
+
+        <!-- Filtros para el menú - opcionales en móvil -->
+        <section class="mb-12">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="bg-amber-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-300 focus:outline-none active">Todos</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-amber-100 transition-colors duration-300 focus:outline-none">Entrantes</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-amber-100 transition-colors duration-300 focus:outline-none">Platos Principales</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-amber-100 transition-colors duration-300 focus:outline-none">Postres</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-amber-100 transition-colors duration-300 focus:outline-none">Bebidas</button>
+            </div>
+        </section>
+
+        <!-- Sección de entrantes -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Entrantes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Plato 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <img src="../_img/presentacion_150.jpg" alt="Entrante 1" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">Carpaccio de Res</h3>
+                            <span class="font-semibold text-amber-600">$14.500</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Finas láminas de ternera con aliño de limón, aceite de oliva virgen extra, rúcula y parmesano.</p>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Sin Gluten</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plato 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <img src="../_img/croquetas-de-jamon-serrano.jpeg" alt="Entrante 2" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">Croquetas Caseras</h3>
+                            <span class="font-semibold text-amber-600">$53.900</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Selección de croquetas artesanales: jamón ibérico, setas y queso azul.</p>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded">Popular</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plato 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <img src="../_img/ensalada-mediterranea-de-tomate-aceitunas-y-queso-feta.webp" alt="Entrante 3" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">Ensalada Mediterránea</h3>
+                            <span class="font-semibold text-amber-600">$10.000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Mix de lechugas, tomate, pepino, aceitunas kalamata, queso feta y aderezo de limón.</p>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Vegetariano</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de platos principales -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Platos Principales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Plato 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <img src="../_img/images.jfif" alt="Plato Principal 1" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">Solomillo a la Parrilla</h3>
+                            <span class="font-semibold text-amber-600">$24.500</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Solomillo de ternera madurada, acompañado de puré de patata trufado y verduras de temporada.</p>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded">Popular</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Sin Gluten</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plato 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <img src="../_img/shutterstock_362075504.width-876.jpg" alt="Plato Principal 2" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">Risotto de Setas</h3>
+                            <span class="font-semibold text-amber-600">$18.000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Arroz carnaroli cocido a fuego lento con caldo casero, variedad de setas silvestres y parmesano.</p>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Vegetariano</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plato 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <img src="../_img/images (1).jfif" alt="Plato Principal 3" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">Lubina al Horno</h3>
+                            <span class="font-semibold text-amber-600">$22.000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Lubina fresca horneada sobre cama de patatas confitadas, tomate cherry y alioli de azafrán.</p>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Pescado Fresco</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de postres -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Postres</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Postre 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <img src="../_img/tiramisu.jfif" alt="Postre 1" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">Tiramisú Casero</h3>
+                            <span class="font-semibold text-amber-600">$7.500</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Capas de bizcocho empapado en café, mascarpone y cacao en polvo.</p>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded">Popular</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Postre 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <img src="../_img/coulant.jpg" alt="Postre 2" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">Coulant de Chocolate</h3>
+                            <span class="font-semibold text-amber-600">$8.000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Bizcocho caliente con interior de chocolate fundido, acompañado de helado de vainilla.</p>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Para Compartir</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Postre 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300">
+                        <img src="../_img/sorbete_Limon.jfif" alt="Postre 3" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">Sorbete de Limón al Cava</h3>
+                            <span class="font-semibold text-amber-600">$6.500</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Refrescante sorbete de limón artesanal con toque de cava.</p>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Sin Gluten</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Vegano</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA para reservas -->
+        <section class="py-12 bg-amber-50 rounded-lg my-12 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">¿Listo para probar nuestro menú?</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Reserva tu mesa ahora y disfruta de una experiencia gastronómica inolvidable.</p>
+            <a href="contact.html" class="bg-amber-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-amber-700 transition-colors duration-300">Reservar Mesa</a>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Restaurante Delicioso</h3>
+                    <p class="text-gray-300">Un lugar donde cada comida se convierte en una experiencia inolvidable.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Horario</h3>
+                    <p class="text-gray-300">Lunes a Viernes: 12:00 - 23:00</p>
+                    <p class="text-gray-300">Sábados y Domingos: 13:00 - 00:00</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contáctanos</h3>
+                    <p class="text-gray-300">Calle Principal 123, Ciudad</p>
+                    <p class="text-gray-300">Teléfono: (123) 456-7890</p>
+                    <p class="text-gray-300">Email: info@restaurantedelicioso.com</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2025 Restaurante Delicioso. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para el menú móvil -->
+    <script src="../_js/menuMovil.js">
+    </script>
+</body>
+</html>

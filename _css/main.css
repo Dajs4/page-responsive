@@ -1,0 +1,95 @@
+/* Estilos para controlar efectos de transición adicionales */
+.transition-custom {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilos para realzar imágenes al hacer hover */
+.image-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos para el formulario */
+input:focus, textarea:focus, select:focus {
+    border-color: #D97706;
+    box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.2);
+}
+
+/* Personalización de scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D97706;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #B45309;
+}
+
+/* Animación para elementos que aparecen en pantalla */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos adicionales para mejorar la accesibilidad */
+.focus-visible:focus-visible {
+    outline: 2px solid #D97706;
+    outline-offset: 2px;
+}
+
+/* Estilos para tarjetas especiales */
+.card-special {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-special::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #D97706, #FCD34D);
+}
+
+/* Ajustes específicos para impresión */
+@media print {
+    header, footer, .no-print {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+}
